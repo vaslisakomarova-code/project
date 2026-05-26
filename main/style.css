@@ -85,7 +85,7 @@ h3,h4{
     gap: 1.2rem;
 }
 .greetings h3, .greetings h4{
-    color: #575757;
+    color: #000000;
     font-family: 'Inter';
     font-weight: 700;
 }
@@ -109,6 +109,7 @@ h3,h4{
     font-size: 1em;
     padding-inline: 3rem;
     transition: .2s;
+    width: 177px;
 }
 .greetings button:hover{
     background-color: transparent;
