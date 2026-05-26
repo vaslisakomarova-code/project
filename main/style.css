@@ -1,10 +1,10 @@
-*{
+css
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     flex-shrink: 0;
 }
-/* latin */
 @font-face {
     font-family: 'Inter';
     font-weight: 100 900;
@@ -17,36 +17,36 @@
     font-display: swap;
     src: url('sources/fonts/emojies.ttf') format('truetype');
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
     transition: .2s;
 }
-header img:hover{
+header img:hover {
     cursor: pointer;
 }
-a:hover{
+a:hover {
     color: white !important;
 }
-body{
+body {
     display: flex;
     flex-direction: column;
     background-color: #FFF9F7;
     font-size: clamp(16px, 1.5vw, 25px);
-    overflow: visible;
-    height: fit-content;
-    min-height: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
-main{
+main {
     margin-top: 110px;
     display: flex;
     flex-direction: column;
-    max-width: 2160px;
+    align-items: center;
     width: 100%;
-    align-self: center
 }
-header{
+header {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 99;
     display: flex;
     justify-content: center;
@@ -54,54 +54,70 @@ header{
     height: 110px;
     width: 100%;
 }
-.header_container{
+.header_container {
     font-size: 1em;
     align-self: center;
     align-items: center;
     display: flex;
     width: 80%;
+    max-width: 1600px;
+    margin: 0 auto;
     justify-content: space-between;
 }
-.header_container a{
+.header_container a {
     color: #E52E2E;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
-h3,h4{
-    text-transform: uppercase;
-}
-.greetings{
+/* Красная полоса на всю ширину */
+.greetings {
+    position: relative;
     display: flex;
-    padding: 3rem;
-    border-bottom: #E52E2E solid clamp(20px, 5vw,4rem);
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+    max-width: 1600px;
+    margin: 0 auto;
     height: clamp(400px, 50vw, 900px);
     font-size: clamp(16px, 1.5vw, 25px);
 }
-.greetings .text_container{
+.greetings::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: clamp(20px, 5vw, 4rem);
+    background-color: #E52E2E;
+    pointer-events: none;
+}
+.greetings .text_container {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    padding: 3rem 0;
 }
-.greetings h3, .greetings h4{
+.greetings h3, .greetings h4 {
     color: #000000;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
-.greetings h3{
+.greetings h3 {
     font-size: 2em;
+    text-transform: uppercase;
 }
-.greetings h4{
+.greetings h4 {
     font-size: .9em;
+    text-transform: none;
 }
-.greetings button{
+.greetings button {
     margin-top: 2rem;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     background-color: #E52E2EE5;
     color: white;
-    outline: none;
     border: 2px solid #E52E2E;
     border-radius: 39px;
     padding: 1rem;
@@ -110,120 +126,121 @@ h3,h4{
     padding-inline: 3rem;
     transition: .2s;
     width: 177px;
-}
-.greetings button:hover{
-    background-color: transparent;
-    color: #E52E2E;
     cursor: pointer;
 }
-.greetings img{
-    height: 100%;
+.greetings button:hover {
+    background-color: transparent;
+    color: #E52E2E;
 }
-.reviews{
-    padding: 2rem;
+.greetings img {
+    max-width: 45%;
+    height: auto;
+}
+/* Блок отзывов */
+.reviews {
+    width: 80%;
+    max-width: 1600px;
+    margin: 2rem auto 0 auto;
     display: flex;
-    align-self: center;
     flex-direction: column;
     gap: 1rem;
-    width: 80%
 }
-.reviews h3{
-    font-family: Inter;
+.reviews h3 {
+    font-family: 'Inter', sans-serif;
     text-transform: none;
     color: #E52E2E;
     font-weight: 400;
     font-size: 1.5em;
 }
-.scroll_container{
+/* Скролл с уменьшенными отступами */
+.scroll_container {
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 3rem 1rem;
+    padding: 1rem 0.5rem;
     gap: 3rem;
     scrollbar-width: none;
 }
-.scroll_container *{
+.scroll_container * {
     flex-shrink: 0;
 }
-.scroll_set{
+.scroll_set {
     display: flex;
     width: 1300px;
     gap: 2rem;
 }
-
-.scroll_container .img_container{
+.scroll_container .img_container {
     flex-shrink: 0;
     overflow: hidden;
     height: 90%;
     border-radius: 10px;
 }
-.scroll_container img{
+.scroll_container img {
     display: block;
     width: 300px;
 }
-.scroll_buttons{
+.scroll_buttons {
     display: flex;
     width: fit-content;
     align-self: center;
     gap: 1rem;
 }
-.scroll_buttons svg{
-    transition: .2s
+.scroll_buttons svg {
+    transition: .2s;
 }
-.scroll_buttons svg:hover{
+.scroll_buttons svg:hover {
     cursor: pointer;
-    scale: 1.1
+    scale: 1.1;
 }
-.comments{
-    flex-wrap: wrap;
-    width: fit-content;
-    margin-top: 1rem;
-    display: flex;
+/* Отзывы – три в ряд, вертикальные отступы */
+.comments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    justify-content: center;
+    padding: 2rem 0;
+    width: 100%;
 }
-.comment{
-    justify-content: center;
-    max-width: clamp(350px,30%,800px);
-    width: fit-content;
+.comment {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 34px;
     border: #FFCEE5 solid 5px;
     background-color: white;
+    box-sizing: border-box;
 }
-.comment svg{
-    width: 35%
+.comment svg {
+    width: 35%;
 }
-.user_information{
-    font-family: Inter;
+.user_information {
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     display: flex;
     font-size: 1.2em;
     gap: 1rem;
     align-items: center;
 }
-.comment p{
+.comment p {
     gap: 1em;
     font-size: .6em;
 }
-.comment p b{
-    font-family: Inter;
+.comment p b {
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 .comment {
     height: fit-content;
-    font-family: Inter, emojies;
+    font-family: 'Inter', 'emojies', sans-serif;
     font-weight: 400;
 }
-.comment_text{
+.comment_text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.upper_footer{
+/* Верхний футер – на всю ширину, красный фон */
+.upper_footer {
     overflow: hidden;
     position: relative;
     padding-top: 10%;
@@ -231,22 +248,24 @@ h3,h4{
     flex-direction: column;
     color: #E52E2E;
     gap: 3rem;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-size: 1.5em;
     height: clamp(300px, calc(10vh + 55vw), 1100px);
     background-color: #FFCEE5;
+    width: 100%;
+    margin-top: 2rem;
 }
-.upper_footer_text{
+.upper_footer_text {
     justify-self: center;
     width: 50%;
     font-weight: 200;
     text-align: center;
     align-self: center;
 }
-.upper_footer_button{
+.upper_footer_button {
     align-self: center;
 }
-.upper_footer button{
+.upper_footer button {
     background-color: #E52E2E;
     outline: none;
     color: white;
@@ -254,53 +273,49 @@ h3,h4{
     border-radius: 2em;
     line-height: 1;
     font-size: 0.8em;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     transition: .2s;
     border: 2px solid #E52E2E;
-}
-.upper_footer button:hover{
-    background-color: transparent;
-    color: #E52E2E;
     cursor: pointer;
 }
-.upper_footer_picture1{
+.upper_footer button:hover {
+    background-color: transparent;
+    color: #E52E2E;
+}
+.upper_footer_picture1 {
     position: absolute;
     bottom: 0;
-    transform: translate(-40%,20%);
+    transform: translate(-40%, 20%);
 }
-.upper_footer img{
+.upper_footer img {
     height: clamp(400px, 40vw, 900px);
 }
-.upper_footer_picture2{
+.upper_footer_picture2 {
     position: absolute;
     left: 40%;
     bottom: 0;
-    transform: translate(30%,7%) rotate(10deg);
+    transform: translate(30%, 7%) rotate(10deg);
 }
-footer{
+/* Обычный футер – на всю ширину, красный фон */
+footer {
     position: relative;
     display: flex;
-    justify-self: flex-end;
     height: 136px;
     background-color: #E52E2E;
     color: white;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: auto;
 }
-footer p{
+footer p {
     font-size: 0.8em;
     font-weight: 200;
     text-align: center;
 }
-footer svg{
-    right: 3%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.footer_content{
+.footer_content {
     position: relative;
     max-width: 2160px;
     width: 100%;
