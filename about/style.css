@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('sources/fonts/Inter.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'emojies';
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('sources/fonts/emojies.ttf') format('truetype');
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s;
+}
+header img:hover{
+    cursor: pointer;
+}
+a:hover{
+    color: white !important;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF9F7;
+    font-size: clamp(16px, 1.5vw, 25px);
+    height: fit-content;
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 2160px;
+    margin-block: 10rem;
+    align-self: center;
+}
+header{
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    background-color: #FFCEE5;
+    height: 110px;
+    width: 100%;
+}
+.header_container{
+    font-size: 1em;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.header_container a{
+    color: #E52E2E;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+h3,h4{
+    text-transform: uppercase;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    height: 136px;
+    background-color: #E52E2E;
+    color: white;
+    font-family: 'Inter';
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 0.8em;
+    font-weight: 200;
+    text-align: center;
+}
+footer svg{
+    right: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer_content{
+    position: relative;
+    max-width: 2160px;
+    width: 100%;
+}
+.main_container{
+    margin-bottom: 5rem;
+    align-self: center;
+    width: 80%;
+    display: grid;
+    gap: 2rem;
+    min-height: stretch;
+    grid-template-columns: 1fr 1fr;
+}
+.main_container img{
+    display: block;
+    align-self: center;
+    justify-self: end;
+    max-width: 900px;
+    width: 100%;
+}
+.main_text{
+    align-self: center;
+    display: grid;
+    gap: 1rem;
+    row-gap: 2rem;
+    grid-template-rows: auto auto 60px;
+}
+.parag{
+    display: grid;
+    gap: 1.5rem
+}
+.main_text h3{
+    font-size: 2em;
+}
+.main_text h3, .main_text p{
+    font-family: 'Inter';
+    font-weight: 700;
+    color: #575757;
+}
+.button_goto button{
+    border: 2px solid #E52E2E;
+    outline: none;
+    background-color: #E52E2E;
+    color: white;
+    border-radius: 30px;
+    font-size: 24px;
+    line-height: 1;
+    font-family: 'Inter';
+    padding: 1rem 1.5rem;
+    transition: .2s;
+}
+.button_goto button:hover{
+    cursor: pointer;
+    color: #E52E2E;
+    background-color: transparent;
+}
+.trusted{
+    margin-top: auto;
+    display: grid;
+    width: 100%;
+    align-self: center;
+    background-color: #FFCEE5;
+    min-height: 366px;
+    padding-block: 2rem;
+    height: fit-content;
+}
+.trusted_grid_container{
+    align-self: center;
+    height: fit-content;
+    justify-self: center;
+    width: 80%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: minmax(320px, auto);
+    grid-auto-columns: auto;
+}
+
+.trusted h3{
+    font-size: 2em;
+    font-family: 'Inter';
+    font-weight: 400;
+    text-transform: none;
+    color: #E52E2E;
+}
+.trusted h4{
+    grid-row: 2;
+    font-size: 1.5em;
+    font-family: 'Inter';
+    text-transform: none;
+}
+.rating{
+    height: fit-content;
+    align-self: start;
+    grid-column: 1/2;
+    font-size: 1em;
+    font-family: 'Inter';
+}
+.rating_count{
+    text-align: center;
+    color: #76606D;
+}
+.rating_count::before{
+    content: '•';
+    margin-inline: 0.4em;
+}
+@media screen and (width<1197px){
+    .trusted_grid_container{
+        padding-block: 5rem;
+        gap: 2rem;
+    }
+    .trusted h3{
+        grid-column: 1/-1 !important;
+        justify-self: center;
+    }
+    .trusted h4{
+        grid-column: 1/-1 !important;
+        justify-self: center;
+    }
+    .rating{
+        grid-column: 1/-1 !important;
+        justify-self: center;
+    }
+    .sold{
+        grid-column: 1/-1 !important;
+        grid-row: 4 !important;
+    }
+    .bought{
+        grid-column: 1/-1 !important;
+        grid-row: 5 !important;
+    }
+    .wild{
+        grid-column: 1/-1 !important;
+        grid-row: 6 !important;
+    }
+}
+.sold{
+    padding: 1rem 1.7rem;
+    column-gap: 2rem;
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+    border-radius: 21px;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    justify-self: center;
+}
+.bought{
+    padding: 1rem 1.7rem;
+    column-gap: 1rem;
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    column-gap: 2rem;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+    border-radius: 21px;
+    grid-column: 3/4;
+    grid-row: 2/4;
+    justify-self: center;
+}
+.wild{
+    padding: 1rem 1.7rem;
+    column-gap: 2rem;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+    align-items: center;
+    border-radius: 21px;
+    grid-row: 2/4;
+    grid-column: 4/5;
+    justify-self: center;
+}
+
+.sold svg{
+    grid-row: 1/3;
+    align-self: center;
+}
+.sold h5{
+    font-family: 'Inter';
+    font-size: 1.5em;
+}
+.sold p{
+    color: #76606D;
+    font-weight: 450;
+    grid-column: 2/3;
+    font-family: 'Inter';
+    font-size: 1.3em;
+}
+.bought svg{
+    grid-row: 1/3;
+    align-self: center;
+}
+.bought h5{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    color: #0FB477;
+}
+.bought p{
+    color: #76606D;
+    font-weight: 450;
+    grid-column: 2/3;
+    font-family: 'Inter';
+    font-size: 1.3em;
+}
+.wild svg{
+    grid-row: 1/3;
+    align-self: center;
+}
+.wild h5{
+    font-family: 'Inter';
+    font-size: 1.5em;
+}
+.wild p{
+    color: #76606D;
+    font-weight: 450;
+    grid-column: 2/3;
+    font-family: 'Inter';
+    font-size: 1.3em;
+}
+.trusted_grid_container svg{
+    scale: 2;
+
+}

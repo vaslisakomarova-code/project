@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+/* latin */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('sources/fonts/Inter.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'emojies';
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('sources/fonts/emojies.ttf') format('truetype');
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .2s;
+}
+header img:hover{
+    cursor: pointer;
+}
+a:hover{
+    color: white !important;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF9F7;
+    font-size: clamp(16px, 1.5vw, 25px);
+    overflow: visible;
+    height: fit-content;
+    min-height: 100%;
+}
+main{
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    max-width: 2160px;
+    width: 100%;
+    align-self: center
+}
+header{
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    background-color: #FFCEE5;
+    height: 110px;
+    width: 100%;
+}
+.header_container{
+    font-size: 1em;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.header_container a{
+    color: #E52E2E;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+h3,h4{
+    text-transform: uppercase;
+}
+.greetings{
+    display: flex;
+    padding: 3rem;
+    border-bottom: #E52E2E solid clamp(20px, 5vw,4rem);
+    align-items: center;
+    justify-content: space-around;
+    height: clamp(400px, 50vw, 900px);
+    font-size: clamp(16px, 1.5vw, 25px);
+}
+.greetings .text_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.greetings h3, .greetings h4{
+    color: #575757;
+    font-family: 'Inter';
+    font-weight: 700;
+}
+.greetings h3{
+    font-size: 2em;
+}
+.greetings h4{
+    font-size: .9em;
+}
+.greetings button{
+    margin-top: 2rem;
+    font-family: 'Inter';
+    font-weight: 400;
+    background-color: #E52E2EE5;
+    color: white;
+    outline: none;
+    border: 2px solid #E52E2E;
+    border-radius: 39px;
+    padding: 1rem;
+    line-height: 1;
+    font-size: 1em;
+    padding-inline: 3rem;
+    transition: .2s;
+}
+.greetings button:hover{
+    background-color: transparent;
+    color: #E52E2E;
+    cursor: pointer;
+}
+.greetings img{
+    height: 100%;
+}
+.reviews{
+    padding: 2rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%
+}
+.reviews h3{
+    font-family: Inter;
+    text-transform: none;
+    color: #E52E2E;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.scroll_container{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 3rem 1rem;
+    gap: 3rem;
+    scrollbar-width: none;
+}
+.scroll_container *{
+    flex-shrink: 0;
+}
+.scroll_set{
+    display: flex;
+    width: 1300px;
+    gap: 2rem;
+}
+
+.scroll_container .img_container{
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 90%;
+    border-radius: 10px;
+}
+.scroll_container img{
+    display: block;
+    width: 300px;
+}
+.scroll_buttons{
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    gap: 1rem;
+}
+.scroll_buttons svg{
+    transition: .2s
+}
+.scroll_buttons svg:hover{
+    cursor: pointer;
+    scale: 1.1
+}
+.comments{
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.comment{
+    justify-content: center;
+    max-width: clamp(350px,30%,800px);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 34px;
+    border: #FFCEE5 solid 5px;
+    background-color: white;
+}
+.comment svg{
+    width: 35%
+}
+.user_information{
+    font-family: Inter;
+    font-weight: 400;
+    display: flex;
+    font-size: 1.2em;
+    gap: 1rem;
+    align-items: center;
+}
+.comment p{
+    gap: 1em;
+    font-size: .6em;
+}
+.comment p b{
+    font-family: Inter;
+    font-weight: 700;
+}
+.comment {
+    height: fit-content;
+    font-family: Inter, emojies;
+    font-weight: 400;
+}
+.comment_text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.upper_footer{
+    overflow: hidden;
+    position: relative;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    color: #E52E2E;
+    gap: 3rem;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    height: clamp(300px, calc(10vh + 55vw), 1100px);
+    background-color: #FFCEE5;
+}
+.upper_footer_text{
+    justify-self: center;
+    width: 50%;
+    font-weight: 200;
+    text-align: center;
+    align-self: center;
+}
+.upper_footer_button{
+    align-self: center;
+}
+.upper_footer button{
+    background-color: #E52E2E;
+    outline: none;
+    color: white;
+    padding: 1.4rem 1.7rem;
+    border-radius: 2em;
+    line-height: 1;
+    font-size: 0.8em;
+    font-family: 'Inter';
+    font-weight: 300;
+    transition: .2s;
+    border: 2px solid #E52E2E;
+}
+.upper_footer button:hover{
+    background-color: transparent;
+    color: #E52E2E;
+    cursor: pointer;
+}
+.upper_footer_picture1{
+    position: absolute;
+    bottom: 0;
+    transform: translate(-40%,20%);
+}
+.upper_footer img{
+    height: clamp(400px, 40vw, 900px);
+}
+.upper_footer_picture2{
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    transform: translate(30%,7%) rotate(10deg);
+}
+footer{
+    position: relative;
+    display: flex;
+    justify-self: flex-end;
+    height: 136px;
+    background-color: #E52E2E;
+    color: white;
+    font-family: 'Inter';
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 0.8em;
+    font-weight: 200;
+    text-align: center;
+}
+footer svg{
+    right: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer_content{
+    position: relative;
+    max-width: 2160px;
+    width: 100%;
+}

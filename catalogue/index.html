@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header_container">
+        <img onclick="window.location.href = '../main/index.html'" src="sources/pictures/logo.svg" alt="">
+        <a href="../about">О нас</a>
+        <a href="../catalogue">Каталог</a>
+        <a href="../care">Уход за изделиями</a>
+        <a href="">Контакты</a>
+    </div>
+</header>
+<main>
+    <div class="popular_product_container">
+        <div class="popular_left">
+            <div class="mark">
+                <p>Популярный товар</p>
+            </div>
+            <div class="popular_header">
+                <h3>Коврик комнатный<br>розовый леопард</h3>
+                <div class="rating">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.98608 0L12.5782 6.93224L19.9722 7.25532L14.1802 11.8628L16.1578 18.9947L9.98608 14.91L3.81434 18.9947L5.79192 11.8628L-9.53674e-06 7.25532L7.39395 6.93224L9.98608 0Z" fill="#FF8400"/>
+                    </svg>
+                    <p>4,9</p>
+                    <p class="rating_count">86 оценок</p>
+                </div>
+            </div>
+            <div class="description">
+                <p>Коврик розовый леопард с Пинтерест. Мы запустили
+                    на ВБ этот тренд, предоставив нашим покупателям возможность, получить модную розовую шкурку
+                    милейшего кошачьего и украсить свой дом. Нежный, шелковистый коврик вносит легкую иронию в интерьер,
+                    заставят улыбаться даже в самые грустные дни.</p>
+            </div>
+            <div class="to_the_product_button">
+                <button>К товару</button>
+            </div>
+        </div>
+        <div class="popular_img">
+            <img src="sources/pictures/img1.png" alt="">
+        </div>
+    </div>
+    <div class="products">
+        <div class="carpets" id="carpets_container">
+            <h3>Ковры</h3>
+            <div id="hid_container">
+                <div class="row" id="row_ex">
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp1.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp2.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp3.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp4.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp5.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp6.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp7.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp8.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp9.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp10.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp11.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp12.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp13.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp14.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/carpets/carp15.png" alt="">
+                    </div>
+            </div>
+            </div>
+            <div class="button_hide">
+                <button onclick="hide('carpets',true)" id="hide_button_c">Показать</button>
+            </div>
+        </div>
+        <div class="pads" id="pads_container">
+            <h3>Подставки</h3>
+            <div id="hid_container_p">
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad1.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad2.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad3.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad4.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad5.png" alt="">
+                    </div>
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad6.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img src="sources/pictures/pads/pad7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="button_hide">
+                <button onclick="hide('pads',true)" id="hide_button_p">Показать</button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer_content">
+        <p>
+            2026<br>
+            Комарова Василиса<br>
+            Коротченкова Елизавета
+        </p>
+    </div>
+</footer>
+</body>
+<script src="index.js"></script>
+</html>
